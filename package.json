@@ -1,0 +1,16 @@
+{
+  "name": "microservices-discovery",
+  "version": "0.1.0",
+  "description": "Server to allow easier connection to various services",
+  "main": "index.js",
+  "repository": "???",
+  "author": "precociouslydigital",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "express": "^4.16.4",
+    "method-override": "^3.0.0",
+    "node-persist": "^3.0.1",
+    "raw-body": "^2.3.3"
+  }
+}
