@@ -8,9 +8,11 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
+    "content-type": "^1.0.4",
     "express": "^4.16.4",
     "method-override": "^3.0.0",
     "node-persist": "^3.0.1",
-    "raw-body": "^2.3.3"
+    "raw-body": "^2.3.3",
+    "string-replace-async": "^1.2.1"
   }
 }
