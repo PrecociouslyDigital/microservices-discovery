@@ -6,10 +6,10 @@ const lookup = require('util').promisify(require("dns").lookupService);
 const getRawBody = require("raw-body");
 const contentType = require('content-type');
 const stringReplaceAsync = require('string-replace-async');
-
+const isHybrid = /:(ffff)?:(?!0)(?!.*\.$)((1?\d?\d|25[0-5]|2[0-4]\d)(\.|$)){4}/g;
 
 const helpers = {
-    IP_ADDR: (req) => req.headers['x-forwarded-for'] || req.connection.remoteAddress,
+    IP_ADDR: (req) => {const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;console.log(ip); return isHybrid.test(ip) ? ip.replace(/:[a-z]*/g, '') : ip;},
     HOSTNAME: async (req) => (await lookup(helpers.IP_ADDR(req), 22)).hostname,
     default: (req, match)=>`{${match}}`,
 }
