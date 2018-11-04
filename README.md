@@ -17,6 +17,6 @@ const login = server.login(await (fetch("/login-server").json()));
 and you're done!
 
 Currently supports
-IP_ADDR: Visible IP Address
-HOSTNAME: Hostname from lookup
-Gimme ideas ppl
+- IP_ADDR: Visible IP Address
+- HOSTNAME: Hostname from lookup
+- Gimme ideas ppl
